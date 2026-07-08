@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #00296B;
+  --color-brand-blue-dark: #001b47;
+  --color-brand-yellow: #FFD600;
+  --color-brand-yellow-hover: #e6c000;
+  --color-brand-dark: #1E293B;
+  --color-brand-slate: #F8FAFC;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth fade in animation */
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Infinite Marquee Keyframe Animations */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.flex.w-max:hover .animate-marquee {
+  animation-play-state: paused;
+}
